@@ -1,0 +1,120 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login-form.css') }}">
+    <!-- <link rel="stylesheet" href="login-form.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome/css/font-awesome.css') }}">
+</head>
+
+<body>
+    <!-- --------------------------------------------------- -->
+    <!-- Login form container -->
+    <div class="container">
+
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img src="{{ url_for('static', filename='images/hero/background-004.jpg') }}" alt="">
+            </div>
+                <img src="{{ url_for('static', filename='images/hero/background-004.jpg') }}" alt="">
+            <div class="back">
+                
+            </div>
+        </div>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        <!-- Form Block-->
+        <form id=1, action="#" method="post">
+
+            <div class="form-content">
+
+                <div class="login-form">
+                    <!-- Title -->
+                    <h2>Вход</h2>
+
+                    <!-- Input Boxes -->
+                    <div class="input-boxes">
+
+                        <!-- Email Input Box -->
+                        <div class="input-box">
+                            <i class="fa fa-envelope"></i>
+                            <input type="text" name="em1" placeholder="Электронная почта" required>
+                        </div>
+                        <!-- End Email Input Box -->
+
+                        <!-- Password Input Box -->
+                        <div class="input-box">
+                            <i class="fa fa-key"></i>
+                            <input type="password" name="pas1" placeholder="Пароль" required>
+                        </div>
+                        <!-- End Password Input Box -->
+
+                        <div class="forget">
+                            <label>
+                                <a href="#">Забыли пароль?</a>
+                            </label>
+                        </div>
+
+                        <!-- Button Input Box -->
+                        <button>Войти</button>
+                        <!-- / End Button Input Box -->
+
+                        <div class="register">
+                            <label>
+                                <p>Ещё не авторизированы? <label for="flip" style="color: #ff8844;">Регистрация</label></p>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+        </form>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        <form id=2, action="#" style='width: 250px; margin-left: 40px;'>
+
+            <div class="signup-form">
+
+                    <h2>Регистрация</h2>
+                    <div class="input-boxes">
+
+                        <div class="input-box">
+                            <i class="fa fa-user-o"></i>
+                            <input type="text" name="username" placeholder="Введите имя пользователя" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <i class="fa fa-envelope"></i>
+                            <input type="text" name="email" placeholder="Введите электронную почту" required>
+                        </div>
+
+                        <div class="input-box">
+                            <i class="fa fa-key"></i>
+                            <input type="text" name="password" placeholder="Придумайте пароль" required>
+                        </div>
+
+                        <div class="input-box">
+                            <i class="fa fa-key"></i>
+                            <input type="text" name="password2" placeholder="Подтвердите пароль" required>
+                        </div>
+
+                        <!-- Button Input Box -->
+                        <button>Зарегистрироваться</button>
+                        <!-- / End Button Input Box -->
+
+                        <div class="login">
+                            <label>
+                                <p>Уже зарегистрированы? <label for="flip" style="color: #ff8844;">Вход</label></div></p>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
